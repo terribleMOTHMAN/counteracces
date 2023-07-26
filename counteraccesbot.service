@@ -1,0 +1,14 @@
+[Unit]
+Description=counteraccesbot
+After=syslog.target
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/counteracces
+ExecStart=/usr/bin/python3 /root/counteracces/main.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
