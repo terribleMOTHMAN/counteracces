@@ -73,8 +73,8 @@ async def inf_bez(message: types.Message):
                          reply_markup=keyboard)
 
 @dp.message_handler(Text(equals="Информационная безопасность автоматизированных систем"))
-async def ohr_bez(message: types.Message):
-    global avt_keyboard
+async def avt_bez(message: types.Message):
+    global now_keyboard
     now_keyboard = 'Информационная безопасность автоматизированных систем'
     keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
     button_1 = types.KeyboardButton(text='ВП по оригиналам')
